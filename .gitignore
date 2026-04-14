@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+backend/uploads/
+backend/downloads/
+
+# Node
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+
+# Large SQL Files (Dumps)
+*.sql
+!backend/samples/*.sql
+
+# OS Files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,124 @@
+/* ========================================
+   Design System — PG→MySQL Converter
+   ======================================== */
+
+:root {
+  /* Colors - Requested Palette */
+  --bg-primary: #E3E3E3;       /* Background - Light gray */
+  --bg-secondary: #fdfdfd;     /* Sections - almost white */
+  --bg-card: #FFFFFF;
+  --bg-glass: rgba(69, 104, 130, 0.05);
+  --border-glass: rgba(27, 60, 83, 0.12);
+  --border-hover: #456882;
+
+  --text-primary: #1B3C53;     /* Main text - Deep blue */
+  --text-secondary: #456882;   /* Lighter blue-gray text */
+  --text-muted: #6b7280;
+
+  --accent-primary: #1B3C53;
+  --accent-secondary: #234C6A;
+  --accent-glow: rgba(27, 60, 83, 0.15);
+
+  --success: #16a34a;
+  --success-glow: rgba(22, 163, 74, 0.1);
+  --warning: #d97706;
+  --error: #dc2626;
+
+  /* Spacing */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* Shadows */
+  --shadow-card: 0 10px 25px rgba(27, 60, 83, 0.08), 0 0 1px var(--border-glass);
+  --shadow-glow: 0 0 40px rgba(27, 60, 83, 0.1);
+
+  /* Fonts */
+  --font-sans: 'Cairo', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Utility Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: var(--border-glass); }
+  50% { border-color: var(--border-hover); }
+}
