@@ -45,4 +45,4 @@ A professional web-based tool designed to convert PostgreSQL SQL dumps to MySQL-
 5. Download the result files after processing is done. | قم بتحميل الملفات الناتجة بعد الانتهاء.
 
 ## Developed By
-Antigravity AI
+Anas Ismail
